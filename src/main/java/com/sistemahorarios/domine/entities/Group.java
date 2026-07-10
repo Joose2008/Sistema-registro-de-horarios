@@ -1,5 +1,6 @@
 package com.sistemahorarios.domine.entities;
 
+import com.sistemahorarios.domine.enums.Modality;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -30,7 +31,6 @@ public class Group {
         private Schedule schedule;
 
         @Column(name="modality", nullable = false)
-        private String modality;
-
+        private Modality modality;
 }
 
