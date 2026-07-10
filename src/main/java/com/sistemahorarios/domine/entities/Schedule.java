@@ -15,7 +15,7 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class Schedules {
+public class Schedule {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;

@@ -6,18 +6,23 @@ import lombok.*;
 import java.util.UUID;
 
 @Entity
-@Table(name = "professors")
+@Table(name = "classes")
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class Professors {
+public class Class {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
 
-    @Column(name = "name", nullable = false)
+    @Column(name="name", nullable = false)
     private String name;
 
+    @Column(name="description", nullable = false, columnDefinition = "TEXT")
+    private String description;
+
+    @Column(name="credits_number", nullable = false)
+    private Integer creditsNumber;
 }

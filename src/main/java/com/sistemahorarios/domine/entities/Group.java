@@ -6,28 +6,28 @@ import lombok.*;
 import java.util.UUID;
 
 @Entity
-@Table(name = "Groups")
+@Table(name = "groups")
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class Groups {
+public class Group {
         @Id
         @GeneratedValue(strategy = GenerationType.UUID)
         private UUID id;
 
         @ManyToOne
         @JoinColumn(name = "id_classes", nullable = false)
-        private Classes classes;
+        private Class classes;
 
         @ManyToOne
         @JoinColumn(name = "id_professor", nullable = false)
-        private Professors professor;
+        private Professor professor;
 
         @ManyToOne
         @JoinColumn(name = "id_schedule", nullable = false)
-        private Schedules schedule;
+        private Schedule schedule;
 
         @Column(name="modality", nullable = false)
         private String modality;
