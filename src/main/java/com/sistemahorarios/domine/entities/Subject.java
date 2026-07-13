@@ -12,7 +12,7 @@ import java.util.UUID;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class Class {
+public class Subject {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
