@@ -1,14 +1,13 @@
 package com.sistemahorarios.service.mapper;
 
-import com.sistemahorarios.api_dto.ClassDtos;
 import com.sistemahorarios.domine.entities.Subject;
 
 public class SubjectMapper {
-    public static Subject toEntity(ClassDtos.ClassCreateRequest req){
+    public static Subject toEntity(com.sistemahorarios.api_dto.SubjectDtos.ClassCreateRequest req){
         return Subject.builder().name(req.name()).description(req.description()).creditsNumber(req.creditsNumber()).build();
     }
 
-    public static void patch(Subject c, ClassDtos.ClassUpdateRequest request){
+    public static void patch(Subject c, com.sistemahorarios.api_dto.SubjectDtos.ClassUpdateRequest request){
         if (request.name() != null) {
             c.setName(request.name());
         }
@@ -20,8 +19,8 @@ public class SubjectMapper {
         }
     }
 
-    public static ClassDtos.ClassResponse toResponse(Subject c){
-        return new ClassDtos.ClassResponse(c.getId(), c.getName(), c.getDescription(), c.getCreditsNumber());
+    public static com.sistemahorarios.api_dto.SubjectDtos.ClassResponse toResponse(Subject c){
+        return new com.sistemahorarios.api_dto.SubjectDtos.ClassResponse(c.getId(), c.getName(), c.getDescription(), c.getCreditsNumber());
 
     }
 }
