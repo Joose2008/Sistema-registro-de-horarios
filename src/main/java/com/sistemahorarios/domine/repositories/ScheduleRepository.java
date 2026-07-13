@@ -10,6 +10,4 @@ import java.util.UUID;
 
 @Repository
 public interface ScheduleRepository extends JpaRepository<Schedule, UUID> {
-
-    List<Schedule> findByDayOFWeek(DayOfWeek dayOfWeek);
 }

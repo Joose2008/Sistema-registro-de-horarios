@@ -1,22 +1,22 @@
-package com.sistemahorarios.api_dto;
+package com.sistemahorarios.api.dtos;
 
 import java.io.Serializable;
 import java.util.UUID;
 
-public class ClassDtos {
-    public record ClassCreateRequest(
+public class SubjectDtos {
+    public record SubjectCreateRequest(
             String name,
             String description,
             Integer creditsNumber
     ) implements Serializable {}
 
-    public record ClassUpdateRequest(
+    public record SubjectUpdateRequest(
             String name,
             String description,
             Integer creditsNumber
     ) implements Serializable{}
 
-    public record ClassResponse(
+    public record SubjectResponse(
             UUID id,
             String name,
             String description,

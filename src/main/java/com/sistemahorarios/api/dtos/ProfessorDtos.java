@@ -1,4 +1,4 @@
-package com.sistemahorarios.api_dto;
+package com.sistemahorarios.api.dtos;
 
 import java.io.Serializable;
 import java.util.UUID;

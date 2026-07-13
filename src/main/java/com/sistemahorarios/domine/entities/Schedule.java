@@ -24,9 +24,9 @@ public class Schedule {
     @Column(name="day_of_week", nullable = false)
     private DayOfWeek day_of_week;
 
-    @Column(name="start", nullable = false)
+    @Column(name="start_time", nullable = false)
     private LocalTime start;
 
-    @Column(name="end", nullable = false)
+    @Column(name="end_time", nullable = false)
     private LocalTime end;
 }

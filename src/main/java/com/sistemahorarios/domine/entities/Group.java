@@ -19,8 +19,8 @@ public class Group {
         private UUID id;
 
         @ManyToOne
-        @JoinColumn(name = "id_classes", nullable = false)
-        private Class classes;
+        @JoinColumn(name = "id_subject", nullable = false)
+        private Subject subject;
 
         @ManyToOne
         @JoinColumn(name = "id_professor", nullable = false)

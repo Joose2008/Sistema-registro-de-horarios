@@ -10,7 +10,7 @@ import java.util.UUID;
 
 @Repository
 public interface GroupRepository extends JpaRepository<Group, UUID> {
-    List<Group> findByMateriaId(UUID materiaId);
+    List<Group> findBySubjectId(UUID SubjectId);
 
     List<Group> findByProfessorId(UUID professorId);
 

@@ -1,4 +1,4 @@
-package com.sistemahorarios.api_dto;
+package com.sistemahorarios.api.dtos;
 
 import com.sistemahorarios.domine.enums.Modality;
 
@@ -7,14 +7,14 @@ import java.util.UUID;
 
 public class GroupDtos {
     public record GroupCreateRequest(
-            UUID classesId,
+            UUID subjectId,
             UUID professorId,
             UUID scheduleId,
             Modality modality
     ) implements Serializable {}
 
     public record GroupUpdateRequest(
-            UUID classesId,
+            UUID subjectId,
             UUID professorId,
             UUID scheduleId,
             Modality modality
@@ -22,7 +22,7 @@ public class GroupDtos {
 
     public record GroupResponse(
             UUID id,
-            UUID classesId,
+            UUID subjectId,
             UUID professorId,
             UUID scheduleId,
             Modality modality
