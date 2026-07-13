@@ -1,6 +1,6 @@
 package com.sistemahorarios.service.mapper;
 
-import com.sistemahorarios.api_dto.ScheduleDtos;
+import com.sistemahorarios.api.dtos.ScheduleDtos;
 import com.sistemahorarios.domine.entities.Schedule;
 
 public class ScheduleMapper {

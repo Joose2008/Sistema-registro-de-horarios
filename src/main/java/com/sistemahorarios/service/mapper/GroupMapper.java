@@ -1,8 +1,7 @@
 package com.sistemahorarios.service.mapper;
 
-import com.sistemahorarios.api_dto.GroupDtos.GroupCreateRequest;
-import com.sistemahorarios.api_dto.GroupDtos.GroupResponse;
-import com.sistemahorarios.api_dto.GroupDtos.GroupUpdateRequest;
+
+import com.sistemahorarios.api.dtos.GroupDtos;
 import com.sistemahorarios.domine.entities.Group;
 import com.sistemahorarios.domine.entities.Professor;
 import com.sistemahorarios.domine.entities.Schedule;
@@ -12,7 +11,7 @@ public class GroupMapper {
 
     // El service debe resolver classesId/professorId/scheduleId contra sus
     // repositorios antes de llamar a este metodo; el mapper no consulta la BD.
-    public static Group toEntity(GroupCreateRequest request, Subject c,
+    public static Group toEntity(GroupDtos.GroupCreateRequest request, Subject c,
                                  Professor professor, Schedule schedule) {
         return Group.builder()
                 .subject(c)
@@ -22,7 +21,7 @@ public class GroupMapper {
                 .build();
     }
 
-    public static void updateEntity(Group g, GroupUpdateRequest request, Subject c,
+    public static void updateEntity(Group g, GroupDtos.GroupUpdateRequest request, Subject c,
                                     Professor professor, Schedule schedule) {
         g.setSubject(c);
         g.setProfessor(professor);
@@ -30,8 +29,8 @@ public class GroupMapper {
         g.setModality(request.modality());
     }
 
-    public static GroupResponse toResponse(Group g) {
-        return new GroupResponse(
+    public static GroupDtos.GroupResponse toResponse(Group g) {
+        return new GroupDtos.GroupResponse(
                 g.getId(),
                 g.getSubject().getId(),
                 g.getProfessor().getId(),

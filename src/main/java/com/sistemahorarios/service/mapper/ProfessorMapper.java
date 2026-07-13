@@ -1,6 +1,6 @@
 package com.sistemahorarios.service.mapper;
 
-import com.sistemahorarios.api_dto.ProfessorDtos.*;
+import com.sistemahorarios.api.dtos.ProfessorDtos.*;
 import com.sistemahorarios.domine.entities.Professor;
 
 public class ProfessorMapper {

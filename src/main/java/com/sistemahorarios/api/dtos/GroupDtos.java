@@ -1,4 +1,4 @@
-package com.sistemah.orarios.api.dtos;
+package com.sistemahorarios.api.dtos;
 
 import com.sistemahorarios.domine.enums.Modality;
 
