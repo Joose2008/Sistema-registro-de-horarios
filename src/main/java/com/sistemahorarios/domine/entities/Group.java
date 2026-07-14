@@ -26,7 +26,7 @@ public class Group {
         @JoinColumn(name = "id_professor", nullable = false)
         private Professor professor;
 
-        @ManyToOne
+        @ManyToMany
         @JoinColumn(name = "id_schedule", nullable = false)
         private Schedule schedule;
 
