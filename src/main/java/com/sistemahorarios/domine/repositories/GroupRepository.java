@@ -15,4 +15,6 @@ public interface GroupRepository extends JpaRepository<Group, UUID> {
     List<Group> findByProfessorId(UUID professorId);
 
     List<Group> findByModality(Modality modality);
+
+    List<Group> findByScheduleId(UUID scheduleId);
 }

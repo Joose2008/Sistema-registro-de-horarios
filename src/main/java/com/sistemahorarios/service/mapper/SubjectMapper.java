@@ -11,7 +11,7 @@ public class SubjectMapper {
         if (request.name() != null) {
             c.setName(request.name());
         }
-        if (request.name() != null) {
+        if (request.description() != null) {
             c.setDescription(request.description());
         }
         if (request.creditsNumber() != null){

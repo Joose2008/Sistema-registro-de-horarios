@@ -9,7 +9,7 @@ import java.util.UUID;
 public interface GroupService {
     GroupResponse create(GroupCreateRequest request);
     GroupResponse update(UUID id, GroupUpdateRequest request);
-    void delete();
+    void delete(UUID id);
     GroupResponse findById(UUID id);
     List<GroupResponse> findAll();
     List<GroupResponse> findBySubject(UUID subjectId);

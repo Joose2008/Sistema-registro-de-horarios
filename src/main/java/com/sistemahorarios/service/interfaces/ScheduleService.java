@@ -9,8 +9,10 @@ import java.util.UUID;
 
 public interface ScheduleService {
     ScheduleResponse create(ScheduleCreateRequest request);
-    ScheduleResponse update(UUID id, ScheduleUpdateRequest);
-    void delete();
+    ScheduleResponse update(UUID id, ScheduleUpdateRequest request);
+
+
+    void delete(UUID id);
     ScheduleResponse findById(UUID uuid);
     List<ScheduleResponse> findAll();
 

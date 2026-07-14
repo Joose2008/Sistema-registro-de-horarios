@@ -7,6 +7,6 @@ import java.util.UUID;
 public interface ProfessorService {
     ProfessorResponse create(ProfessorCreateRequest request);
     ProfessorResponse update(UUID id, ProfessorUpdateRequest request);
-    void delete();
+    void delete(UUID id);
     ProfessorResponse findById(UUID id);
 }
